@@ -1,10 +1,10 @@
 # Grimdark Stats
 
 ### Table of Contents: 
-* [Background and Overview]()
-* [Functionality and MVP ]()
-* [Architecture and Technologies]()
-* [Implementation Timeline]()
+* [Background and Overview](#background-and-overview)
+* [Functionality and MVP ](#functionality-and-mvp)
+* [Architecture and Technologies](#architecture-and-technologies)
+* [Implementation Timeline](#implmentation-timeline)
 
 
 ## Background and Overview 
@@ -18,7 +18,7 @@ Grimdark stats's goal is to utilize the fantastic data collected over at 40kstat
 - [ ] Select visualization for each faction
 - [ ] Hover over charts to see more information.
 
-## Architecture and technologies 
+## Architecture and Technologies 
 
 This project is implemented using the following: 
 
