@@ -10,7 +10,7 @@ const svg = d3.select("svg").attr("width", "1000").attr("height", "500");
 const width = +svg.attr("width");
 const height = +svg.attr("height");
 
-const render = (data) => {
+const renderHrzBar = (data) => {
   const xValue = (d) => d["Avg VP"];
   const yValue = (d) => d.Player;
   const margin = { top: 20, right: 20, bottom: 20, left: 180 };
@@ -48,10 +48,10 @@ const render = (data) => {
 };
 
 data.then((d) => {
+	console.log(d);
   let factions = d.filter((row) => {
     return row.Faction === "Adepta Sororitas";
   });
 
-  render(factions);
-  console.log(factions);
+  renderHrzBar(factions);
 });
