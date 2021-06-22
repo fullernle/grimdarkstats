@@ -26,7 +26,7 @@ const renderHrzBar = (data) => {
     .scaleBand()
     .domain(data.map(yValue))
     .range([0, innerHeight])
-		.padding(0.1);
+    .padding(0.1);
 
   // g = group element
   const g = svg
@@ -47,11 +47,106 @@ const renderHrzBar = (data) => {
     .attr("height", yScale.bandwidth());
 };
 
-data.then((d) => {
-	console.log(d);
-  let factions = d.filter((row) => {
-    return row.Faction === "Adepta Sororitas";
-  });
+var nodeData = {
+  name: "TOPICS",
+  children: [
+    {
+      name: "Topic A",
+      children: [
+        { name: "Sub A1", size: 4 },
+        { name: "Sub A2", size: 4 },
+      ],
+    },
+    {
+      name: "Topic B",
+      children: [
+        { name: "Sub B1", size: 3 },
+        { name: "Sub B2", size: 3 },
+        {
+          name: "Sub B3",
+          size: 3,
+        },
+      ],
+    },
+    {
+      name: "Topic C",
+      children: [
+        { name: "Sub A1", size: 4 },
+        { name: "Sub A2", size: 4 },
+      ],
+    },
+  ],
+};
 
-  renderHrzBar(factions);
+
+
+var nodeData = {
+  name: "Factions Breakdown",
+  children: [
+    {
+      name: "Adepta Sororitas",
+      children: [
+        { name: "Order of the Bloody Rose", size: 4 },
+        { name: "Order of the Ebon Chalice", size: 4 },
+        { name: "Order of the Sacred Rose", size: 4 },
+        { name: "Order of the Valorous Heart", size: 4 },
+        { name: "Order of Our Martyred Lady", size: 4 },
+				{ name: "Adeptus Ministorum", size: 4} 
+      ],
+    },
+    {
+      name: "Adeptus Custodes",
+      children: [
+        { name: "Solar Watch", size: 3 },
+        { name: "Shadowkeepers", size: 3 },
+        { name: "Dread Host", size: 3 },
+        { name: "Emissaries Imperaturs", size: 3 },
+        { name: "Aquilan Shield", size: 3 },
+        {
+          name: "Sub B3",
+          size: 3,
+        },
+      ],
+    },
+    {
+      name: "Blood Angels",
+      children: [
+        { name: "Blood Angels", size: 4 },
+        { name: "Flesh Tearers", size: 4 },
+      ],
+    },
+  ],
+};
+
+
+
+
+const filterFactions = (data) => {
+	let data ={}
+
+	let adeptaSoriritas = data.forEach((row) => {
+		let faction = {
+			faction: row.Faction,
+			chapter: row.Chapter
+		}
+ 
+  });
+	
+
+	return factions;
+};
+
+
+
+data.then((d) => {
+  console.log(d);
+
+
+	let filtered = filterFactions(d);
+
+
+	
+
+	console.log(filtered);
+  renderHrzBar(filtered);
 });
