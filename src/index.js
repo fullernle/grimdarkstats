@@ -1,7 +1,14 @@
 import "./styles/index.scss";
 
-// const data = d3.csv("../data/2020data.csv");
+const data = d3.csv(
+  "https://raw.githubusercontent.com/lefuller/grimdarkstats/factions-graph/data/2020data.csv"
+);
 
-// data.then(data => {
-// 	console.log(data);
-// })
+data.then((d) => {
+  console.log(d);
+  let factions = d.filter((row) => {
+    return row.Faction === "Adepta Sororitas";
+  });
+
+  console.log(factions);
+});
