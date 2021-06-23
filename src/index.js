@@ -8,48 +8,38 @@ const data = d3.csv(
   d3.autoType
 );
 
-
-const factioncolors = (faction) => {
-	switch(faction) {
-		default:
-			return #ffeeff;
-	}
-}
-
-
-
 const filterFactions = async (data) => {
   let filter = {
     name: "Factions Breakdown",
     children: [],
   };
-	let colorValue = 0.05;
+  let colorValue = 0.05;
 
   let filtered = await data.then((d) => {
     let currFaction = d[0].Faction;
     let factionInfo = {
       name: currFaction,
       children: [],
-			colorValue: colorValue
+      colorValue: colorValue,
     };
 
     d.forEach((row, i) => {
       if (row.Faction !== currFaction) {
         currFaction = row.Faction;
         filter.children.push(factionInfo);
-				colorValue += 0.025;
+        colorValue += 0.025;
 
         factionInfo = {
           name: currFaction,
           children: [],
-					colorValue: colorValue
+          colorValue: colorValue,
         };
       }
 
       let chapterInfo = {
         name: row.Chapter,
         size: row["# Lists"],
-				colorValue: colorValue
+        colorValue: colorValue,
       };
       factionInfo.children.push(chapterInfo);
 
@@ -63,15 +53,13 @@ const sunBurst = async () => {
   let nodeData = await filterFactions(data);
 
   // Variables
-  var width = window.innerWidth / 2;
-  var height = window.innerHeight;
-  var radius = Math.min(width, height) / 2;
-  // var color = d3.scaleOrdinal(d3.schemeCategory10);
-  // var color = d3.scaleOrdinal(d3.schemeTableau10);
-  var color = d3.scaleSequential(d3.interpolateViridis);
+  const width = window.innerWidth / 2;
+  const height = window.innerHeight;
+  const radius = Math.min(width, height) / 2;
+  const color = d3.scaleSequential(d3.interpolateViridis);
 
   // Create primary <g> element
-  var g = d3
+  const g = d3
     .select("svg")
     .attr("width", width)
     .attr("height", height)
@@ -79,16 +67,16 @@ const sunBurst = async () => {
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
   // Data strucure
-  var partition = d3.partition().size([2 * Math.PI, radius]);
+  const partition = d3.partition().size([2 * Math.PI, radius]);
 
   // Find data root
-  var root = d3.hierarchy(nodeData).sum(function (d) {
+  const root = d3.hierarchy(nodeData).sum(function (d) {
     return d.size;
   });
 
   // Size arcs
   partition(root);
-  var arc = d3
+  const arc = d3
     .arc()
     .startAngle(function (d) {
       return d.x0;
@@ -103,10 +91,8 @@ const sunBurst = async () => {
       return d.y1;
     });
 
-  // Put it all together
-  g.selectAll("path")
-    .data(root.descendants())
-    .enter()
+  const slices = g.selectAll("g").data(root.descendants()).enter().append("g");
+  slices
     .append("path")
     .attr("display", function (d) {
       return d.depth ? null : "none";
@@ -115,11 +101,45 @@ const sunBurst = async () => {
     .attr("class", "slice")
     .style("stroke", "#fff")
     .style("fill", function (d) {
-      let currColor = color((d.children ? d : d.parent).data.colorValue)
-			console.log(currColor);
-			return currColor;
+      let currColor = color((d.children ? d : d.parent).data.colorValue);
+      return currColor;
     });
+
+		slices.append("svg:title") 
+			.text(d => d.data.name)
+
+  // slices
+  //   .append("text") // <--1
+  //   .filter(function (d) {
+  //     return d.parent;
+  //   }) // <--2
+  //   .attr("transform", function (d) {
+  //     // <--3
+  //     return (
+  //       "translate(" +
+  //       arc.centroid(d) +
+  //       ")rotate(" +
+  //       computeTextRotation(d) +
+  //       ")"
+  //     );
+  //   })
+  //   .attr("dx", "-20") // <--4
+  //   .attr("dy", ".5em") // <--5
+  //   .text(function (d) {
+	// 		console.log(d);
+  //     return d.data.name;
+  //   }); // <--6
 };
+
+function computeTextRotation(d) {
+  var angle = ((d.x0 + d.x1) / Math.PI) * 90; // <-- 1
+
+  // Avoid upside-down labels; labels aligned with slices
+  return angle < 90 || angle > 270 ? angle : angle + 180; // <--2
+
+  // Alternate label formatting; labels as spokes
+  //return (angle < 180) ? angle - 90 : angle + 90;  // <-- 3
+}
 
 sunBurst();
 // const factions = d3.csv(
