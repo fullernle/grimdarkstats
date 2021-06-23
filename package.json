@@ -5,7 +5,6 @@
   "main": "postcss.config.js",
   "dependencies": {
     "d3": "^7.0.0",
-    "d3plus": "^2.0.0",
     "resolve-url-loader": "^4.0.0"
   },
   "devDependencies": {

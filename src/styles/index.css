@@ -1,7 +1,9 @@
 rect {
-	fill: #1b1919;
+	fill: #003d26
 }
-
+body {
+	margin: 0 32px;
+}
 text {
 	font-size: 1.4em;
 }
@@ -10,4 +12,15 @@ text {
 	opacity: .50;
 }
 
+.content {
+	display: flex;
 
+}
+
+.side-bar {
+	width: 20vw;
+}
+
+header {
+	margin-left: 60px;
+}
