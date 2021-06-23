@@ -7,6 +7,17 @@ const data = d3.csv(
   "https://gist.githubusercontent.com/lefuller/378bb2d512cbbc81ddd66cb0c4a571bf/raw/d3f649c3ba184d62000018a4227cf2905e78bf1a/subfactions.csv",
   d3.autoType
 );
+
+
+const factioncolors = (faction) => {
+	switch(faction) {
+		default:
+			return #ffeeff;
+	}
+}
+
+
+
 const filterFactions = async (data) => {
   let filter = {
     name: "Factions Breakdown",

@@ -1,5 +1,5 @@
 rect {
-	fill: steelblue;
+	fill: #1b1919;
 }
 
 text {
@@ -9,3 +9,5 @@ text {
 .slice:hover {
 	opacity: .50;
 }
+
+
