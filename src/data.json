@@ -1,0 +1,868 @@
+{
+  "name": "Faction breakdown",
+  "children": [
+    {
+      "name": "Adepta Sororitas",
+      "children": [
+        {
+          "name": "Order of the Bloody Rose",
+          "size": 55,
+          "colorValue": 0.05
+        },
+        {
+          "name": "Order of the Ebon Chalice",
+          "size": 6,
+          "colorValue": 0.05
+        },
+        {
+          "name": "Order of the Sacred Rose",
+          "size": 1,
+          "colorValue": 0.05
+        },
+        {
+          "name": "Order of the Valorous Heart",
+          "size": 33,
+          "colorValue": 0.05
+        },
+        {
+          "name": "Order of Our Martyred Lady",
+          "size": 7,
+          "colorValue": 0.05
+        },
+        {
+          "name": "Adeptus Ministorum",
+          "size": 5,
+          "colorValue": 0.05
+        }
+      ],
+      "colorValue": 0.05
+    },
+    {
+      "name": "Adeptus Custodes",
+      "children": [
+        {
+          "name": "Unknown",
+          "size": 2,
+          "colorValue": 0.07500000000000001
+        },
+        {
+          "name": "Solar Watch",
+          "size": 1,
+          "colorValue": 0.07500000000000001
+        },
+        {
+          "name": "Shadowkeepers",
+          "size": 62,
+          "colorValue": 0.07500000000000001
+        },
+        {
+          "name": "Dread Host",
+          "size": 13,
+          "colorValue": 0.07500000000000001
+        },
+        {
+          "name": "Emissaries Imperatus",
+          "size": 4,
+          "colorValue": 0.07500000000000001
+        },
+        {
+          "name": "Aquilan Shield",
+          "size": 1,
+          "colorValue": 0.07500000000000001
+        }
+      ],
+      "colorValue": 0.07500000000000001
+    },
+    {
+      "name": "Astra Militarum",
+      "children": [
+        {
+          "name": "Cadian",
+          "size": 5,
+          "colorValue": 0.1
+        },
+        {
+          "name": "Catachan",
+          "size": 16,
+          "colorValue": 0.1
+        },
+        {
+          "name": "Mordian",
+          "size": 1,
+          "colorValue": 0.1
+        },
+        {
+          "name": "Unknown",
+          "size": 1,
+          "colorValue": 0.1
+        },
+        {
+          "name": "Vostroyan",
+          "size": 6,
+          "colorValue": 0.1
+        },
+        {
+          "name": "Death Korps of Krieg",
+          "size": 6,
+          "colorValue": 0.1
+        },
+        {
+          "name": "Custom Regiment",
+          "size": 41,
+          "colorValue": 0.1
+        },
+        {
+          "name": "Iotan Gorgonnes",
+          "size": 4,
+          "colorValue": 0.1
+        },
+        {
+          "name": "Lambdan Lions",
+          "size": 11,
+          "colorValue": 0.1
+        },
+        {
+          "name": "Kappic Eagles",
+          "size": 3,
+          "colorValue": 0.1
+        },
+        {
+          "name": "Ioton Dragons",
+          "size": 1,
+          "colorValue": 0.1
+        }
+      ],
+      "colorValue": 0.1
+    },
+    {
+      "name": "Asuryani",
+      "children": [
+        {
+          "name": "Alaitoc",
+          "size": 2,
+          "colorValue": 0.125
+        },
+        {
+          "name": "Biel-tan",
+          "size": 1,
+          "colorValue": 0.125
+        },
+        {
+          "name": "Custom Craftworld",
+          "size": 36,
+          "colorValue": 0.125
+        },
+        {
+          "name": "Iyanden",
+          "size": 1,
+          "colorValue": 0.125
+        },
+        {
+          "name": "Mixed",
+          "size": 1,
+          "colorValue": 0.125
+        }
+      ],
+      "colorValue": 0.125
+    },
+    {
+      "name": "Blood Angels",
+      "children": [
+        {
+          "name": "Blood Angels",
+          "size": 59,
+          "colorValue": 0.15
+        },
+        {
+          "name": "Flesh Tearers",
+          "size": 1,
+          "colorValue": 0.15
+        }
+      ],
+      "colorValue": 0.15
+    },
+    {
+      "name": "Chaos Daemons",
+      "children": [
+        {
+          "name": "Chaos Undivided",
+          "size": 33,
+          "colorValue": 0.175
+        },
+        {
+          "name": "Khorne",
+          "size": 4,
+          "colorValue": 0.175
+        },
+        {
+          "name": "Nurgle",
+          "size": 13,
+          "colorValue": 0.175
+        },
+        {
+          "name": "Slaanesh",
+          "size": 33,
+          "colorValue": 0.175
+        },
+        {
+          "name": "Tzeentch",
+          "size": 7,
+          "colorValue": 0.175
+        }
+      ],
+      "colorValue": 0.175
+    },
+    {
+      "name": "Chaos Space Marines",
+      "children": [
+        {
+          "name": "Alpha Legion",
+          "size": 11,
+          "colorValue": 0.19999999999999998
+        },
+        {
+          "name": "Black Legion",
+          "size": 7,
+          "colorValue": 0.19999999999999998
+        },
+        {
+          "name": "Emperor's Children",
+          "size": 34,
+          "colorValue": 0.19999999999999998
+        },
+        {
+          "name": "Iron Warriors",
+          "size": 21,
+          "colorValue": 0.19999999999999998
+        },
+        {
+          "name": "Mixed",
+          "size": 2,
+          "colorValue": 0.19999999999999998
+        },
+        {
+          "name": "Night Lords",
+          "size": 3,
+          "colorValue": 0.19999999999999998
+        },
+        {
+          "name": "Red Corsairs",
+          "size": 2,
+          "colorValue": 0.19999999999999998
+        },
+        {
+          "name": "The Purge",
+          "size": 1,
+          "colorValue": 0.19999999999999998
+        },
+        {
+          "name": "Unknown",
+          "size": 1,
+          "colorValue": 0.19999999999999998
+        },
+        {
+          "name": "Word Bearers",
+          "size": 12,
+          "colorValue": 0.19999999999999998
+        },
+        {
+          "name": "World Eaters",
+          "size": 14,
+          "colorValue": 0.19999999999999998
+        },
+        {
+          "name": "Creations of Bile",
+          "size": 2,
+          "colorValue": 0.19999999999999998
+        }
+      ],
+      "colorValue": 0.19999999999999998
+    },
+    {
+      "name": "Cult Mechanicus",
+      "children": [
+        {
+          "name": "Lucius",
+          "size": 7,
+          "colorValue": 0.22499999999999998
+        },
+        {
+          "name": "Mars",
+          "size": 26,
+          "colorValue": 0.22499999999999998
+        },
+        {
+          "name": "Mixed",
+          "size": 3,
+          "colorValue": 0.22499999999999998
+        },
+        {
+          "name": "Ryza",
+          "size": 1,
+          "colorValue": 0.22499999999999998
+        },
+        {
+          "name": "Stygies",
+          "size": 17,
+          "colorValue": 0.22499999999999998
+        },
+        {
+          "name": "Custom Forgeworld",
+          "size": 9,
+          "colorValue": 0.22499999999999998
+        },
+        {
+          "name": "Metalica",
+          "size": 7,
+          "colorValue": 0.22499999999999998
+        }
+      ],
+      "colorValue": 0.22499999999999998
+    },
+    {
+      "name": "Dark Angels",
+      "children": [
+        {
+          "name": " Dark Angels",
+          "size": 105,
+          "colorValue": 0.24999999999999997
+        }
+      ],
+      "colorValue": 0.24999999999999997
+    },
+    {
+      "name": "Death Guard",
+      "children": [
+        {
+          "name": "Mixed",
+          "size": 1,
+          "colorValue": 0.27499999999999997
+        },
+        {
+          "name": "Unknown",
+          "size": 3,
+          "colorValue": 0.27499999999999997
+        },
+        {
+          "name": "Poxmongers",
+          "size": 10,
+          "colorValue": 0.27499999999999997
+        },
+        {
+          "name": "The Wretched",
+          "size": 6,
+          "colorValue": 0.27499999999999997
+        },
+        {
+          "name": "The Inexorable",
+          "size": 51,
+          "colorValue": 0.27499999999999997
+        },
+        {
+          "name": "Mortarion's Chosen Sons",
+          "size": 4,
+          "colorValue": 0.27499999999999997
+        },
+        {
+          "name": "Mortarion",
+          "size": 60,
+          "colorValue": 0.27499999999999997
+        },
+        {
+          "name": "Mortarion's Anvil",
+          "size": 23,
+          "colorValue": 0.27499999999999997
+        },
+        {
+          "name": "Fortification",
+          "size": 1,
+          "colorValue": 0.27499999999999997
+        },
+        {
+          "name": "The Harbingers",
+          "size": 11,
+          "colorValue": 0.27499999999999997
+        },
+        {
+          "name": "The Ferrymen",
+          "size": 18,
+          "colorValue": 0.27499999999999997
+        }
+      ],
+      "colorValue": 0.27499999999999997
+    },
+    {
+      "name": "Deathwatch",
+      "children": [
+        {
+          "name": " Deathwatch",
+          "size": 21,
+          "colorValue": 0.3
+        }
+      ],
+      "colorValue": 0.3
+    },
+    {
+      "name": "Drukhari",
+      "children": [
+        {
+          "name": "Cult of the Cursed Blade",
+          "size": 10,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Cult of the Red Grief",
+          "size": 3,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Custom Coven",
+          "size": 1,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Kabal of the Black Heart",
+          "size": 71,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Kabal of the Flayed Skull",
+          "size": 1,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Prophets of Flesh",
+          "size": 3,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Custom Kabal",
+          "size": 1,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Kabal of the Obsidian Rose",
+          "size": 17,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Cult of Strife",
+          "size": 93,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Realspace Raiders",
+          "size": 10,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Coven of Twelve",
+          "size": 1,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Dark Technomancers",
+          "size": 72,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Dark Creed",
+          "size": 7,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Kabal of the Poisoned Tongue",
+          "size": 16,
+          "colorValue": 0.325
+        },
+        {
+          "name": "Artists of Flesh",
+          "size": 5,
+          "colorValue": 0.325
+        }
+      ],
+      "colorValue": 0.325
+    },
+    {
+      "name": "Genestealer Cults",
+      "children": [
+        {
+          "name": null,
+          "size": 12,
+          "colorValue": 0.35000000000000003
+        },
+        {
+          "name": "Bladed Cog",
+          "size": 1,
+          "colorValue": 0.35000000000000003
+        },
+        {
+          "name": "Four Armed Emperor",
+          "size": 5,
+          "colorValue": 0.35000000000000003
+        },
+        {
+          "name": "Mixed",
+          "size": 1,
+          "colorValue": 0.35000000000000003
+        },
+        {
+          "name": "Twisted Helix",
+          "size": 3,
+          "colorValue": 0.35000000000000003
+        },
+        {
+          "name": "Unknown",
+          "size": 1,
+          "colorValue": 0.35000000000000003
+        },
+        {
+          "name": "Pauper Princes",
+          "size": 1,
+          "colorValue": 0.35000000000000003
+        }
+      ],
+      "colorValue": 0.35000000000000003
+    },
+    {
+      "name": "Grey Knights",
+      "children": [
+        {
+          "name": " Grey Knights",
+          "size": 18,
+          "colorValue": 0.37500000000000006
+        }
+      ],
+      "colorValue": 0.37500000000000006
+    },
+    {
+      "name": "Harlequins",
+      "children": [
+        {
+          "name": "Dreaming Shadow",
+          "size": 4,
+          "colorValue": 0.4000000000000001
+        },
+        {
+          "name": "Frozen Stars",
+          "size": 9,
+          "colorValue": 0.4000000000000001
+        },
+        {
+          "name": "Soaring Spite",
+          "size": 25,
+          "colorValue": 0.4000000000000001
+        },
+        {
+          "name": "Midnight Sorrow",
+          "size": 2,
+          "colorValue": 0.4000000000000001
+        }
+      ],
+      "colorValue": 0.4000000000000001
+    },
+    {
+      "name": "Imperial Knights",
+      "children": [
+        {
+          "name": "House Krast",
+          "size": 19,
+          "colorValue": 0.4250000000000001
+        },
+        {
+          "name": "House Raven",
+          "size": 13,
+          "colorValue": 0.4250000000000001
+        },
+        {
+          "name": "House Taranis",
+          "size": 7,
+          "colorValue": 0.4250000000000001
+        },
+        {
+          "name": "House Terryn",
+          "size": 3,
+          "colorValue": 0.4250000000000001
+        },
+        {
+          "name": "House Vulker",
+          "size": 1,
+          "colorValue": 0.4250000000000001
+        },
+        {
+          "name": "Unknown",
+          "size": 2,
+          "colorValue": 0.4250000000000001
+        },
+        {
+          "name": "Custom Household",
+          "size": 13,
+          "colorValue": 0.4250000000000001
+        },
+        {
+          "name": "Freeblade Lance",
+          "size": 1,
+          "colorValue": 0.4250000000000001
+        }
+      ],
+      "colorValue": 0.4250000000000001
+    },
+    {
+      "name": "Necrons",
+      "children": [
+        {
+          "name": "Unknown",
+          "size": 3,
+          "colorValue": 0.4500000000000001
+        },
+        {
+          "name": "Novokh",
+          "size": 21,
+          "colorValue": 0.4500000000000001
+        },
+        {
+          "name": "Sautekh",
+          "size": 5,
+          "colorValue": 0.4500000000000001
+        },
+        {
+          "name": "Nephrekh",
+          "size": 2,
+          "colorValue": 0.4500000000000001
+        },
+        {
+          "name": "Mephrit",
+          "size": 12,
+          "colorValue": 0.4500000000000001
+        },
+        {
+          "name": "Fortification",
+          "size": 1,
+          "colorValue": 0.4500000000000001
+        },
+        {
+          "name": "Nihilakh",
+          "size": 1,
+          "colorValue": 0.4500000000000001
+        },
+        {
+          "name": "Custom Dynasty",
+          "size": 69,
+          "colorValue": 0.4500000000000001
+        },
+        {
+          "name": "Szarekhan",
+          "size": 13,
+          "colorValue": 0.4500000000000001
+        },
+        {
+          "name": "The Silent King",
+          "size": 33,
+          "colorValue": 0.4500000000000001
+        }
+      ],
+      "colorValue": 0.4500000000000001
+    },
+    {
+      "name": "Orks",
+      "children": [
+        {
+          "name": "Bad Moons",
+          "size": 6,
+          "colorValue": 0.47500000000000014
+        },
+        {
+          "name": "Deathskulls",
+          "size": 31,
+          "colorValue": 0.47500000000000014
+        },
+        {
+          "name": "Evil Sunz",
+          "size": 15,
+          "colorValue": 0.47500000000000014
+        },
+        {
+          "name": "Freebooters",
+          "size": 1,
+          "colorValue": 0.47500000000000014
+        },
+        {
+          "name": "Goffs",
+          "size": 13,
+          "colorValue": 0.47500000000000014
+        },
+        {
+          "name": "Grot Mobs",
+          "size": 12,
+          "colorValue": 0.47500000000000014
+        },
+        {
+          "name": "Blood Axes",
+          "size": 3,
+          "colorValue": 0.47500000000000014
+        },
+        {
+          "name": "Huntas",
+          "size": 1,
+          "colorValue": 0.47500000000000014
+        }
+      ],
+      "colorValue": 0.47500000000000014
+    },
+    {
+      "name": "Renegade Knights",
+      "children": [
+        {
+          "name": "Unknown",
+          "size": 2,
+          "colorValue": 0.5000000000000001
+        },
+        {
+          "name": "House Herpetrax",
+          "size": 1,
+          "colorValue": 0.5000000000000001
+        },
+        {
+          "name": "House Vextrix",
+          "size": 3,
+          "colorValue": 0.5000000000000001
+        },
+        {
+          "name": "House Lucaris",
+          "size": 4,
+          "colorValue": 0.5000000000000001
+        },
+        {
+          "name": "Custom Household",
+          "size": 17,
+          "colorValue": 0.5000000000000001
+        }
+      ],
+      "colorValue": 0.5000000000000001
+    },
+    {
+      "name": "Space Wolves",
+      "children": [
+        {
+          "name": "Space Wolves",
+          "size": 57,
+          "colorValue": 0.5250000000000001
+        }
+      ],
+      "colorValue": 0.5250000000000001
+    },
+    {
+      "name": "T'au Empire",
+      "children": [
+        {
+          "name": "T'au Sept",
+          "size": 13,
+          "colorValue": 0.5500000000000002
+        },
+        {
+          "name": "Vior'la Sept",
+          "size": 4,
+          "colorValue": 0.5500000000000002
+        },
+        {
+          "name": "Dal'yth Sept",
+          "size": 1,
+          "colorValue": 0.5500000000000002
+        },
+        {
+          "name": "Farsight Enclaves",
+          "size": 14,
+          "colorValue": 0.5500000000000002
+        },
+        {
+          "name": "Custom Sept",
+          "size": 11,
+          "colorValue": 0.5500000000000002
+        },
+        {
+          "name": "Fortification",
+          "size": 1,
+          "colorValue": 0.5500000000000002
+        }
+      ],
+      "colorValue": 0.5500000000000002
+    },
+    {
+      "name": "Thousand Sons",
+      "children": [
+        {
+          "name": "Cult of Magic",
+          "size": 12,
+          "colorValue": 0.5750000000000002
+        },
+        {
+          "name": "Cult of Duplicity",
+          "size": 8,
+          "colorValue": 0.5750000000000002
+        },
+        {
+          "name": "Cult of Time",
+          "size": 4,
+          "colorValue": 0.5750000000000002
+        },
+        {
+          "name": "Cult of Scheming",
+          "size": 2,
+          "colorValue": 0.5750000000000002
+        },
+        {
+          "name": "Cult of Mutation",
+          "size": 3,
+          "colorValue": 0.5750000000000002
+        },
+        {
+          "name": "Magnus",
+          "size": 17,
+          "colorValue": 0.5750000000000002
+        }
+      ],
+      "colorValue": 0.5750000000000002
+    },
+    {
+      "name": "Tyranids",
+      "children": [
+        {
+          "name": "Behemoth",
+          "size": 1,
+          "colorValue": 0.6000000000000002
+        },
+        {
+          "name": "Jormungandr",
+          "size": 2,
+          "colorValue": 0.6000000000000002
+        },
+        {
+          "name": "Kraken",
+          "size": 24,
+          "colorValue": 0.6000000000000002
+        },
+        {
+          "name": "Kronos",
+          "size": 28,
+          "colorValue": 0.6000000000000002
+        },
+        {
+          "name": "Leviathan",
+          "size": 4,
+          "colorValue": 0.6000000000000002
+        },
+        {
+          "name": "Unknown",
+          "size": 3,
+          "colorValue": 0.6000000000000002
+        },
+        {
+          "name": "Custom Hive Fleet",
+          "size": 4,
+          "colorValue": 0.6000000000000002
+        }
+      ],
+      "colorValue": 0.6000000000000002
+    }
+  ]
+}
