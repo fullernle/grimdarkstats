@@ -5,3 +5,7 @@ rect {
 text {
 	font-size: 1.4em;
 }
+
+.slice:hover {
+	opacity: .50;
+}
