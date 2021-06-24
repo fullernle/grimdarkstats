@@ -2,44 +2,6 @@ import { factionColors, filterFactions } from "./index";
 import regeneratorRuntime from "regenerator-runtime";
 import * as d3 from "d3";
 
-// export const drawPercentages = async (nodeData) => {
-//   let data = await nodeData;
-
-//   for (let i = 0; i < data.length; i++) {
-//     let faction = data[i];
-//     if (!Object.keys(factionColors).includes(faction.Faction)) continue;
-
-//     let factionName = faction.Faction.split(" ").join("");
-//     d3.select(".graph")
-//       .append("svg")
-//       .attr("class", `round ${factionName}`)
-// 			.classed("round", true)
-//       .attr("viewbox", [0, 0, 200, 200])
-//       .attr("width", "150")
-//       .attr("height", "150")
-//       .append("circle")
-//       .attr("cx", "50")
-//       .attr("cy", "50")
-//       .attr("r", "40")
-// 			.append("text")
-// 			.text(faction["Actual Win %"])
-
-//     let radius = d3.select("circle").attr("r");
-//     let percent = faction["Actual Win %"];
-//     let circumference = 2 * radius * Math.PI;
-//     let draw = percent * circumference / 100;
-// 		let style = `strokeDashArray: ${percent} 999`;
-//     let circle = d3
-//       .select(`.${factionName}`)
-// 			.attr("style", `stroke: ${factionColors[faction.Faction]}`)
-// 			.classed(`${factionName}`, true)
-// 			.style("transform", "rotate(-90deg)")
-// 			.style("transition", "all 1s eas-in-out")
-//       .style("stroke-dasharray",`${draw} 999`);
-
-//   }
-// };
-
 export const drawPercentages = async (nodeData) => {
   let data = await nodeData;
 

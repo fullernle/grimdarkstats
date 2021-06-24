@@ -116,5 +116,3 @@ wrFaction.addEventListener("click", () => {
   clearGraph();
   setTimeout(1000, drawPercentages(factionData));
 });
-// mcFaction.onclick = drawSunburst(data);
-// wrFaction.onclick = drawPercentages(factionData);

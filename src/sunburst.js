@@ -4,7 +4,6 @@ import * as d3 from "d3";
 
 export const drawSunburst = async (nodeData) => {
   const data = await filterFactions(nodeData);
-  // const totalLists = sumValues(data.children);
   const format = d3.format(",d");
   const width = 960;
   const radius = width / 6;
