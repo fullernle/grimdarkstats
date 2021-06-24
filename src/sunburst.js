@@ -1,6 +1,6 @@
 import { filterFactions, sumValues } from "./index";
 import regeneratorRuntime from "regenerator-runtime";
-import * as d3 from 'd3';
+import * as d3 from "d3";
 
 export const drawSunburst = async (nodeData) => {
   const data = await filterFactions(nodeData);
@@ -36,8 +36,8 @@ export const drawSunburst = async (nodeData) => {
 
   const svg = d3
     .select(".graph")
-		.append("svg")
-		.attr("class", "sunburst")
+    .append("svg")
+    .attr("class", "sunburst")
     .attr("width", "60vw")
     .attr("height", "95vh")
     .attr("viewBox", [0, 0, width, width])
@@ -67,9 +67,11 @@ export const drawSunburst = async (nodeData) => {
   path.append("title").text((d) => {
     let title;
     if (d.data.win) {
-      title = d.data.name + "\n" + "Win Rate: " + d.data.win + "%";
+      title =
+        "Subfaction: " + d.data.name + "\n" + "Win Rate: " + d.data.win + "%";
     } else {
-      title = d.data.name;
+      title =
+        d.data.name + "\n" + "Faction Win Rate: " + d.data.factionWin + "%";
     }
 
     return title;

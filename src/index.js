@@ -6,7 +6,7 @@ import regeneratorRuntime from "regenerator-runtime";
 import { drawPercentages } from "./percentages";
 
 const subFactionData = d3.csv(
-  "https://gist.githubusercontent.com/lefuller/378bb2d512cbbc81ddd66cb0c4a571bf/raw/aa28cef8592d0797f1433e24b4224eb9b7b474f7/subfactions.csv",
+  "https://gist.githubusercontent.com/lefuller/378bb2d512cbbc81ddd66cb0c4a571bf/raw/5e574212e3780fea73744f46e27d72680a59d7f6/subfactions.csv",
   d3.autoType
 );
 
@@ -72,6 +72,7 @@ export const filterFactions = async (data) => {
       children: [],
       total: 0,
       colorValue: factionColors[currFaction],
+      factionWin: d[0]["Faction Win %"],
     };
 
     d.forEach((row, i) => {
@@ -94,6 +95,7 @@ export const filterFactions = async (data) => {
         colorValue: factionColors[currFaction],
         win: row["Win %"],
       };
+      factionInfo.factionWin = row["Faction Win %"];
       factionInfo.children.push(chapterInfo);
 
       if (!d[i + 1]) filter.children.push(factionInfo);
