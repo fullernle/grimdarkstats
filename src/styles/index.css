@@ -148,9 +148,36 @@ body {
   color: #ffffff;
   border-radius: 24px;
   margin: auto;
+  animation: expand 1s ease-in-out forwards;
 }
 
 .graph-wrapper {
   max-width: 1020px;
 }
 
+@keyframes expand {
+  0% {
+		height: 0;
+    opacity: 0;
+		font-size: 0;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+	0% {
+		opacity: 0;
+		transform: scale(.5)
+	}
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: scale(1) rotate(-360deg);
+  }
+}
+
+.sunburst {
+  animation: spin 1000ms ease-in-out;
+}

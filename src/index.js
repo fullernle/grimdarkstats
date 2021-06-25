@@ -102,44 +102,52 @@ export const filterFactions = async (data) => {
 };
 
 export const clearGraphHeader = () => {
-		let wrapper = document.querySelector(".graph-wrapper header");
-    let oldText = document.querySelector(".header-text");
-    if (oldText) {
-      wrapper.removeChild(oldText);
-    }
-}
+  let wrapper = document.querySelector(".graph-wrapper header");
+  let oldText = document.querySelector(".header-text");
+  if (oldText) {
+    wrapper.removeChild(oldText);
+  }
+};
 
 export const clearHome = () => {
-
-	let child = document.querySelector(".content").childNodes[1];
-	if (child) {
-		child.remove();
-	}
-}
+  let child = document.querySelector(".content").childNodes[1];
+  if (child) {
+    child.remove();
+  }
+};
 
 export const clearGraph = () => d3.selectAll("svg").remove();
-let mcFaction = document.querySelector(".mc-faction");
-let wrFaction = document.querySelector(".wr-faction");
-let logo = document.querySelector(".logo");
+const mcFaction = document.querySelector(".mc-faction");
+const wrFaction = document.querySelector(".wr-faction");
+const logo = document.querySelector(".logo");
 
 mcFaction.addEventListener("click", () => {
-	clearHome();
-  clearGraph();
-	clearGraphHeader();
-  setTimeout(1000, drawSunburst(subFactionData));
+  const exists = document.querySelector(".sunburst");
+  if (!exists) {
+    clearHome();
+    clearGraph();
+    clearGraphHeader();
+    setTimeout(1000, drawSunburst(subFactionData));
+  }
 });
 wrFaction.addEventListener("click", () => {
-	clearHome();
-  clearGraph();
-	clearGraphHeader();
-  setTimeout(1000, drawPercentages(factionData));
+  const exists = document.querySelector(".circle");
+  if (!exists) {
+    clearHome();
+    clearGraph();
+    clearGraphHeader();
+    setTimeout(1000, drawPercentages(factionData));
+  }
 });
 
 logo.addEventListener("click", () => {
-	clearGraph();
-	clearGraphHeader();
-	drawHome();
+  const exists = document.querySelector(".greeting");
+  if (!exists) {
+    clearHome();
+    clearGraph();
+    clearGraphHeader();
+    drawHome();
+  }
 });
-
 
 drawHome();
