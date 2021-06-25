@@ -4,19 +4,16 @@ import { drawSunburst } from "./sunburst";
 import { filterLimit } from "async";
 import regeneratorRuntime from "regenerator-runtime";
 import { drawPercentages } from "./percentages";
+import { drawFaction } from "./faction";
+import { drawHome } from "./home";
 
 const subFactionData = d3.csv(
-  "https://gist.githubusercontent.com/lefuller/378bb2d512cbbc81ddd66cb0c4a571bf/raw/5e574212e3780fea73744f46e27d72680a59d7f6/subfactions.csv",
+  "https://gist.githubusercontent.com/fullernle/378bb2d512cbbc81ddd66cb0c4a571bf/raw/daa2f4f097e1723fbdfc5e0486ae9234a0c76903/subfactions.csv",
   d3.autoType
 );
 
-const playerData = d3.csv(
-  "https://gist.githubusercontent.com/lefuller/378bb2d512cbbc81ddd66cb0c4a571bf/raw/d58f2367dd8c0448e95276e8b5bea5560ab6c57c/Overall.csv",
-  d3.autoType
-);
-
-const factionData = d3.csv(
-  "https://gist.githubusercontent.com/lefuller/378bb2d512cbbc81ddd66cb0c4a571bf/raw/805a79ce78bc8f89940ba9f26c991b3c737cc722/Overall.csv",
+export const factionData = d3.csv(
+  "https://gist.githubusercontent.com/fullernle/378bb2d512cbbc81ddd66cb0c4a571bf/raw/5e574212e3780fea73744f46e27d72680a59d7f6/Overall.csv",
   d3.autoType
 );
 
@@ -104,15 +101,45 @@ export const filterFactions = async (data) => {
   return filter;
 };
 
-const clearGraph = () => d3.selectAll("svg").remove();
+export const clearGraphHeader = () => {
+		let wrapper = document.querySelector(".graph-wrapper header");
+    let oldText = document.querySelector(".header-text");
+    if (oldText) {
+      wrapper.removeChild(oldText);
+    }
+}
+
+export const clearHome = () => {
+
+	let child = document.querySelector(".content").childNodes[1];
+	if (child) {
+		child.remove();
+	}
+}
+
+export const clearGraph = () => d3.selectAll("svg").remove();
 let mcFaction = document.querySelector(".mc-faction");
 let wrFaction = document.querySelector(".wr-faction");
+let logo = document.querySelector(".logo");
 
 mcFaction.addEventListener("click", () => {
+	clearHome();
   clearGraph();
+	clearGraphHeader();
   setTimeout(1000, drawSunburst(subFactionData));
 });
 wrFaction.addEventListener("click", () => {
+	clearHome();
   clearGraph();
+	clearGraphHeader();
   setTimeout(1000, drawPercentages(factionData));
 });
+
+logo.addEventListener("click", () => {
+	clearGraph();
+	clearGraphHeader();
+	drawHome();
+});
+
+
+drawHome();

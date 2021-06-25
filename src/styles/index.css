@@ -1,13 +1,10 @@
-rect {
-  fill: #003d26;
-}
-body {
-  margin: 0 32px;
-}
 text {
   font-size: 1.4em;
+  color: #cacaca;
 }
-
+p {
+  color: #cacaca;
+}
 .slice:hover {
   opacity: 0.5;
 }
@@ -17,68 +14,143 @@ text {
 }
 
 .side-bar {
-  width: 20vw;
+  width: 200px;
 }
 
-header {
+.graph-wrapper header {
+  text-align: center;
+}
+.graph-wrapper {
+  margin: 0 auto;
 }
 
 .graph {
-  display: flex;
   flex-wrap: wrap;
-	max-width: 70vw;
+  max-width: 80vw;
+  overflow-y: auto;
 }
-/* 
-.round {
-  transform: rotate(-90deg);
-  transition: all 1s ease-in-out;
 
-  fill: none;
-  stroke-width: 8;
-  stroke-linecap: round;
-  stroke: red;
-} */
 svg {
-	transition: all 300ms ease;
-	margin: 10px;
+  transition: all 300ms ease;
+  margin: 10px;
 }
-
 
 .round .background {
   fill: #e6e7e8;
 }
 
 .circle:hover {
-	transform: scale(1.05);
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .round text.win-percentage {
   font-family: Graphik;
-  font-size: 28px;
+  font-size: 20px;
   letter-spacing: -0.03em;
 }
 .round text.description {
   font-family: Graphik;
   font-size: 12px;
-  fill: #5a5a5a;
+  fill: #cacaca;
 }
 
 .round text.faction-title {
-	font-family: Graphik;
-	font-size: 16px;
-	fill: grey;
+  font-family: Graphik;
+  font-size: 16px;
+  fill: grey;
 }
 .mc-faction:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .wr-faction:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  height: 60px;
+  color: rgb(208, 208, 208);
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
 
+.nav-bttn {
+  display: flex;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  margin: 0 8px;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.nav-bttn:hover {
+  background-color: #03dac6;
+  color: black;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 28px;
+  margin-left: 0;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: #121212;
+}
+
+.percentage {
+}
+.header-text {
+  font-size: 30px;
+  margin-bottom: 24px;
+}
 .sunburst {
-	position: absolute;
-	top: 0;
-	left: 400px;
+  transition: all 500ms ease-in-out;
 }
+.visible {
+  display: none;
+  transform: scale(1.5);
+}
+
+.left-nav {
+  display: flex;
+  height: inherit;
+}
+
+.right-nav {
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+}
+
+.parent:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.greeting {
+  width: 60vw;
+  height: 20vw;
+  background-color: black;
+  color: #ffffff;
+  border-radius: 24px;
+  margin: auto;
+}
+
+.graph-wrapper {
+  max-width: 1020px;
+}
+

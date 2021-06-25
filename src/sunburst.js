@@ -2,8 +2,8 @@ import { filterFactions, sumValues } from "./index";
 import regeneratorRuntime from "regenerator-runtime";
 import * as d3 from "d3";
 
-export const drawSunburst = async (nodeData) => {
-  const data = await filterFactions(nodeData);
+export const drawSunburst = async (factionData) => {
+  const data = await filterFactions(factionData);
   const format = d3.format(",d");
   const width = 960;
   const radius = width / 6;
@@ -37,8 +37,10 @@ export const drawSunburst = async (nodeData) => {
     .select(".graph")
     .append("svg")
     .attr("class", "sunburst")
-    .attr("width", "60vw")
-    .attr("height", "95vh")
+		.attr("width", "1000px")
+		.attr("height", "1000px")
+    // .attr("width", "60vw")
+    // .attr("height", "95vh")
     .attr("viewBox", [0, 0, width, width])
     .style("font", "10px Graphik");
 
@@ -51,7 +53,9 @@ export const drawSunburst = async (nodeData) => {
     .selectAll("path")
     .data(root.descendants())
     .join("path")
-    .attr("class", "slice")
+		.attr("class", (d) => {
+			return d.children ? "slice parent" : "slice"
+		})
     .attr("fill", (d) => d.data.colorValue)
     .attr("fill-opacity", (d) =>
       arcVisible(d.current) ? (d.children ? 0.75 : 0.5) : 0
@@ -85,6 +89,7 @@ export const drawSunburst = async (nodeData) => {
     .data(root.descendants().slice(1))
     .join("text")
     .attr("dy", "0.35em")
+    .attr("fill", `#cacaca`)
     .attr("fill-opacity", (d) => +labelVisible(d.current))
     .attr("transform", (d) => labelTransform(d.current, radius))
     .attr("class", "text-wrap")
