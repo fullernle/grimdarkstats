@@ -52,13 +52,13 @@ svg {
 .round text.description {
   font-family: Graphik;
   font-size: 12px;
-  fill: #cacaca;
+  fill: #ffffffad;
 }
 
 .round text.faction-title {
   font-family: Graphik;
   font-size: 16px;
-  fill: grey;
+  fill: #bb86fc;
 }
 .mc-faction:hover {
   cursor: pointer;
@@ -110,8 +110,6 @@ body {
   background-color: #121212;
 }
 
-.percentage {
-}
 .header-text {
   font-size: 30px;
   margin-bottom: 24px;
@@ -133,7 +131,7 @@ body {
   height: inherit;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 200px;
 }
 
 .parent:hover {
@@ -142,15 +140,121 @@ body {
 }
 
 .greeting {
-  width: 60vw;
-  height: 20vw;
+  display: flex;
+  flex-direction: column;
   background-color: black;
   color: #ffffff;
   border-radius: 24px;
   margin: auto;
+  margin-top: 15vh;
+  padding: 32px;
+	justify-content: center;
+  animation: expand 700ms ease-in-out forwards;
+	width: 900px;
+	height: 500px;
 }
 
+.greeting-text-wrapper {
+  margin-top: 14px;
+  margin-bottom: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.greeting-header {
+  font-size: 26px;
+  color: hsla(0, 0%, 100%, 0.8);
+  margin-bottom: inherit;
+	text-align: center;
+}
+
+.greeting-text {
+  font-size: 20px;
+  color: hsla(0, 0%, 100%, 0.6);
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.greeting-text > a {
+  text-decoration: none;
+  color: #bb86fc;
+	align-self: center;
+}
+
+.instruction-header {
+  font-size: 24px;
+  color: hsla(0, 0%, 100%, 0.8);
+}
+.greeting-instructions {
+  margin-top: 24px;;
+	display: flex;
+	justify-content: center;
+	align-items: center;;
+	flex-direction: column;
+}
+.greeting-instructions-text {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+  margin-top: 8px;
+}
 .graph-wrapper {
   max-width: 1020px;
 }
 
+.sunburst {
+  animation: spin 1000ms ease-in-out;
+}
+
+.logo-40k {
+  width: 400px;
+  align-self: center;
+}
+
+
+
+#text {
+  font-size: 14px;
+}
+
+li {
+  font-size: 16px;
+  color: hsla(0, 0%, 100%, 0.6);
+	margin-bottom: 2px;
+}
+
+.li-header {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.8);
+	font-size: 18px;
+}
+
+@keyframes expand {
+  0% {
+    height: 0;
+    opacity: 0;
+    font-size: 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: scale(1) rotate(-360deg);
+  }
+}
+
+
+footer {
+	font-size: 12px;
+	margin-top: 40px;
+	  color: hsla(0, 0%, 100%, 0.4);
+}
