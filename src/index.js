@@ -7,12 +7,12 @@ import { drawPercentages } from "./percentages";
 import { drawFaction } from "./faction";
 
 const subFactionData = d3.csv(
-  "https://gist.githubusercontent.com/lefuller/378bb2d512cbbc81ddd66cb0c4a571bf/raw/5e574212e3780fea73744f46e27d72680a59d7f6/subfactions.csv",
+  "https://gist.githubusercontent.com/fullernle/378bb2d512cbbc81ddd66cb0c4a571bf/raw/5e574212e3780fea73744f46e27d72680a59d7f6/subfactions.csv",
   d3.autoType
 );
 
 export const factionData = d3.csv(
-  "https://gist.githubusercontent.com/lefuller/378bb2d512cbbc81ddd66cb0c4a571bf/raw/805a79ce78bc8f89940ba9f26c991b3c737cc722/Overall.csv",
+  "https://gist.githubusercontent.com/fullernle/378bb2d512cbbc81ddd66cb0c4a571bf/raw/5e574212e3780fea73744f46e27d72680a59d7f6/Overall.csv",
   d3.autoType
 );
 
@@ -100,15 +100,25 @@ export const filterFactions = async (data) => {
   return filter;
 };
 
-const clearGraph = () => d3.selectAll("svg").remove();
+export const clearGraphHeader = () => {
+		let wrapper = document.querySelector(".graph-wrapper header");
+    let oldText = document.querySelector(".header-text");
+    if (oldText) {
+      wrapper.removeChild(oldText);
+    }
+}
+
+export const clearGraph = () => d3.selectAll("svg").remove();
 let mcFaction = document.querySelector(".mc-faction");
 let wrFaction = document.querySelector(".wr-faction");
 
 mcFaction.addEventListener("click", () => {
   clearGraph();
+	clearGraphHeader();
   setTimeout(1000, drawSunburst(subFactionData));
 });
 wrFaction.addEventListener("click", () => {
   clearGraph();
+	clearGraphHeader();
   setTimeout(1000, drawPercentages(factionData));
 });

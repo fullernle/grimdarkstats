@@ -87,6 +87,7 @@ export const drawSunburst = async (factionData) => {
     .data(root.descendants().slice(1))
     .join("text")
     .attr("dy", "0.35em")
+    .attr("fill", `#cacaca`)
     .attr("fill-opacity", (d) => +labelVisible(d.current))
     .attr("transform", (d) => labelTransform(d.current, radius))
     .attr("class", "text-wrap")

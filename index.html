@@ -4,31 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="./src/styles/reset.css">
     <link rel="stylesheet" href="./src/styles/index.css" />
 
     <title>Grimdark Stats</title>
   </head>
   <body>
-    <header>
-      <h1>Welcome to Grimdark stats!</h1>
-    </header>
-
-    <div class="content">
-      <section class="side-bar">
-        <p>
-          Please click on each major faction to see their subfactions! <br />
-          Hover over each subfaction to see their win rate!
-        </p>
-				<div class="mc-faction">
+		<nav class="nav-bar">
+				<div class="logo nav-bttn">
+					Grimdark Stats
+				</div>
+				<div class="mc-faction nav-bttn">
 					Most Common Faction Played 
 				</div>
 
-				<div class="wr-faction">
+				<div class="wr-faction nav-bttn">
 					Faction Win Rates
 				</div>
-      </section>
-
+		</nav>
+    <div class="content">
       <section class="graph-wrapper">
+				<header></header>
         <section class="graph">
         </section>
       </section>
