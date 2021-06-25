@@ -58,7 +58,7 @@ svg {
 .round text.faction-title {
   font-family: Graphik;
   font-size: 16px;
-  fill: #BB86FC;
+  fill: #bb86fc;
 }
 .mc-faction:hover {
   cursor: pointer;
@@ -140,8 +140,8 @@ body {
 }
 
 .greeting {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
   width: 60vw;
   height: 20vw;
   background-color: black;
@@ -149,31 +149,40 @@ body {
   border-radius: 24px;
   margin: auto;
   animation: expand 1s ease-in-out forwards;
-	margin-top: 15vh;
-	padding: 32px;
+  margin-top: 15vh;
+  padding: 32px;
+}
+
+.greeting-text-wrapper {
+  margin-top: 14px;
+  margin-bottom: 8px;
+}
+
+.greeting-header {
+  font-size: 20px;
+	margin-bottom: inherit;
 }
 
 .greeting-text {
-	margin-top: 16px;
+	margin-bottom: inherit;
 }
-
 .graph-wrapper {
   max-width: 1020px;
 }
 
 @keyframes expand {
   0% {
-		height: 0;
+    height: 0;
     opacity: 0;
-		font-size: 0;
+    font-size: 0;
   }
 }
 
 @keyframes spin {
-	0% {
-		opacity: 0;
-		transform: scale(.5)
-	}
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
   100% {
     -webkit-transform: rotate(-360deg);
     transform: scale(1) rotate(-360deg);
@@ -185,6 +194,11 @@ body {
 }
 
 .logo-40k {
-	width: 400px;
-	align-self: center;
+  width: 400px;
+  align-self: center;
+}
+
+a {
+  text-decoration: none;
+  color: #bb86fc;
 }
