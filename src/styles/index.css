@@ -52,13 +52,13 @@ svg {
 .round text.description {
   font-family: Graphik;
   font-size: 12px;
-  fill: #cacaca;
+  fill: #ffffffad;
 }
 
 .round text.faction-title {
   font-family: Graphik;
   font-size: 16px;
-  fill: grey;
+  fill: #BB86FC;
 }
 .mc-faction:hover {
   cursor: pointer;
@@ -110,8 +110,6 @@ body {
   background-color: #121212;
 }
 
-.percentage {
-}
 .header-text {
   font-size: 30px;
   margin-bottom: 24px;
@@ -142,6 +140,8 @@ body {
 }
 
 .greeting {
+	display: flex;
+	flex-direction: column;
   width: 60vw;
   height: 20vw;
   background-color: black;
@@ -149,6 +149,12 @@ body {
   border-radius: 24px;
   margin: auto;
   animation: expand 1s ease-in-out forwards;
+	margin-top: 15vh;
+	padding: 32px;
+}
+
+.greeting-text {
+	margin-top: 16px;
 }
 
 .graph-wrapper {
@@ -160,10 +166,6 @@ body {
 		height: 0;
     opacity: 0;
 		font-size: 0;
-  }
-
-  100% {
-    transform: scale(1);
   }
 }
 
@@ -180,4 +182,9 @@ body {
 
 .sunburst {
   animation: spin 1000ms ease-in-out;
+}
+
+.logo-40k {
+	width: 400px;
+	align-self: center;
 }

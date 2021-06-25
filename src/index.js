@@ -34,7 +34,7 @@ export const factionColors = {
   "Grey Knights": "#8696A0",
   Harlequins: "#74E1EA",
   "Imperial Knights": "#A09990",
-  Necrons: "#C5C6CA",
+  Necrons: "#727272",
   Orks: "#007427",
   "Renegade Knights": "#595E4B",
   "Space Wolves": "#6D94B3",
