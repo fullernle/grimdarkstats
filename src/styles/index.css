@@ -131,7 +131,7 @@ body {
   height: inherit;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 200px;
 }
 
 .parent:hover {
@@ -250,4 +250,11 @@ li {
     -webkit-transform: rotate(-360deg);
     transform: scale(1) rotate(-360deg);
   }
+}
+
+
+footer {
+	font-size: 12px;
+	margin-top: 40px;
+	  color: hsla(0, 0%, 100%, 0.4);
 }

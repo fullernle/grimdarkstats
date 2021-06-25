@@ -82,4 +82,9 @@ export const drawHome = () => {
 
   section.append(sectionText);
   wrapper.append(section);
+
+
+	const dateInfo = document.createElement("footer"); 
+	dateInfo.append("Data taken on 06.21.2021");
+	wrapper.append(dateInfo);
 };
