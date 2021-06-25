@@ -53,7 +53,9 @@ export const drawSunburst = async (factionData) => {
     .selectAll("path")
     .data(root.descendants())
     .join("path")
-    .attr("class", "slice")
+		.attr("class", (d) => {
+			return d.children ? "slice parent" : "slice"
+		})
     .attr("fill", (d) => d.data.colorValue)
     .attr("fill-opacity", (d) =>
       arcVisible(d.current) ? (d.children ? 0.75 : 0.5) : 0

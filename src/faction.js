@@ -50,6 +50,7 @@ const drawBar = (data, factionName) => {
   const svg = d3
     .select(".graph")
     .append("svg")
+		.attr("class", "percentage")
     .attr("height", height)
     .attr("width", width);
 
@@ -86,10 +87,19 @@ const drawBar = (data, factionName) => {
     .enter()
     .append("rect")
     .attr("y", (d) => yScale(yValue(d)))
-    .attr("width", (d) => xScale(xValue(d)))
+    .attr("width", (d) => xScale(xValue(0)))
     .attr("height", yScale.bandwidth())
 		.attr("fill", color)
 		.append("title").text(d => `${d.value}`);
 
-	
+	svg
+    .selectAll("rect")
+    .transition()
+    .duration(800)
+    .attr("width", function (d) {
+      return xScale(d.value);
+    })
+    .delay(function (d, i) {
+      return i * 300;
+    });
 };

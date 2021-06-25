@@ -1,9 +1,9 @@
 text {
   font-size: 1.4em;
-	color: #cacaca;
+  color: #cacaca;
 }
 p {
-	color: #cacaca;
+  color: #cacaca;
 }
 .slice:hover {
   opacity: 0.5;
@@ -75,25 +75,31 @@ nav {
   height: 60px;
   color: rgb(208, 208, 208);
   margin-bottom: 20px;
+  justify-content: space-between;
 }
 
 .nav-bttn {
-	display: flex;
-	height: inherit;
-	align-items: center;
-	padding: 0 12px;
+  display: flex;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
   margin: 0 8px;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
 }
 
 .nav-bttn:hover {
-	background-color: #03DAC6;
-	color: white;
+  background-color: #03dac6;
+  color: black;
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
 .logo {
   font-size: 28px;
-	margin-left: 0;
-	cursor: pointer;
+  margin-left: 0;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -101,5 +107,50 @@ nav {
 }
 
 body {
-	background-color: #121212;
+  background-color: #121212;
 }
+
+.percentage {
+}
+.header-text {
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+.sunburst {
+  transition: all 500ms ease-in-out;
+}
+.visible {
+  display: none;
+  transform: scale(1.5);
+}
+
+.left-nav {
+  display: flex;
+  height: inherit;
+}
+
+.right-nav {
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+}
+
+.parent:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.greeting {
+  width: 60vw;
+  height: 20vw;
+  background-color: black;
+  color: #ffffff;
+  border-radius: 24px;
+  margin: auto;
+}
+
+.graph-wrapper {
+  max-width: 1020px;
+}
+
