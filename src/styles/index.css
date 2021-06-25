@@ -50,6 +50,7 @@ svg {
 
 .circle:hover {
 	transform: scale(1.05);
+	cursor: pointer;
 }
 
 .round text.win-percentage {

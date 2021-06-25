@@ -4,18 +4,14 @@ import { drawSunburst } from "./sunburst";
 import { filterLimit } from "async";
 import regeneratorRuntime from "regenerator-runtime";
 import { drawPercentages } from "./percentages";
+import { drawFaction } from "./faction";
 
 const subFactionData = d3.csv(
   "https://gist.githubusercontent.com/lefuller/378bb2d512cbbc81ddd66cb0c4a571bf/raw/5e574212e3780fea73744f46e27d72680a59d7f6/subfactions.csv",
   d3.autoType
 );
 
-const playerData = d3.csv(
-  "https://gist.githubusercontent.com/lefuller/378bb2d512cbbc81ddd66cb0c4a571bf/raw/d58f2367dd8c0448e95276e8b5bea5560ab6c57c/Overall.csv",
-  d3.autoType
-);
-
-const factionData = d3.csv(
+export const factionData = d3.csv(
   "https://gist.githubusercontent.com/lefuller/378bb2d512cbbc81ddd66cb0c4a571bf/raw/805a79ce78bc8f89940ba9f26c991b3c737cc722/Overall.csv",
   d3.autoType
 );

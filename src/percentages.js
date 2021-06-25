@@ -1,9 +1,10 @@
 import { factionColors, filterFactions } from "./index";
 import regeneratorRuntime from "regenerator-runtime";
 import * as d3 from "d3";
+import { drawFaction } from "./faction";
 
-export const drawPercentages = async (nodeData) => {
-  let data = await nodeData;
+export const drawPercentages = async (factionData) => {
+  let data = await factionData;
 
   for (let i = 0; i < data.length; i++) {
     let faction = data[i];
@@ -18,12 +19,15 @@ export const drawPercentages = async (nodeData) => {
 
     const arc = d3.arc().startAngle(0).innerRadius(40).outerRadius(50);
 
+		const currFactionData = data.filter(d => d.Faction === faction.Faction);
+
     const svg = d3
       .select(".graph")
       .append("svg")
       .attr("class", "circle")
       .attr("width", width)
       .attr("height", height)
+      .on("click", () => drawFaction(currFactionData[0]))
       .append("g")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
@@ -44,14 +48,14 @@ export const drawPercentages = async (nodeData) => {
       .attr("dy", "0em")
       .attr("dx", ".2em");
 
-    const description = currFaction
+    currFaction
       .append("text")
       .attr("text-anchor", "middle")
       .attr("class", "description")
       .attr("dy", "1.8em")
       .text("Win Rate");
 
-    const facionName = currFaction
+    currFaction
       .append("text")
       .attr("text-anchor", "middle")
       .attr("class", "faction-title")
