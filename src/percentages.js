@@ -33,10 +33,7 @@ export const drawPercentages = async (factionData) => {
       .attr("class", "round " + i)
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-    const background = g
-      .append("path")
-      .datum({ endAngle: twoPi })
-      .attr("d", arc);
+    g.append("path").datum({ endAngle: twoPi }).attr("d", arc);
 
     const foreground = g
       .append("path")
@@ -50,7 +47,7 @@ export const drawPercentages = async (factionData) => {
       .attr("fill", () => (winRate >= 0.49 ? "#00a300" : "#a30000"))
       .attr("dy", "0em")
       .attr("dx", ".2em")
-			.text(formatPercent(winRate));
+      .text(formatPercent(winRate));
 
     g.append("text")
       .attr("text-anchor", "middle")
@@ -65,11 +62,12 @@ export const drawPercentages = async (factionData) => {
       .text(
         `${faction.Faction === "Chaos Space Marines" ? "CSM" : faction.Faction}`
       );
+
+			
     foreground
       .transition()
       .duration(1000)
       .attrTween("d", arcTween(winRate * twoPi));
-		
 
     function arcTween(angle) {
       return function (d) {
