@@ -129,9 +129,11 @@ body {
 
 .right-nav {
   height: inherit;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  width: 200px;
+  width: 120px;
+	display: flex;
+	margin-right: 24px;
 }
 
 .parent:hover {
@@ -148,40 +150,40 @@ body {
   margin: auto;
   margin-top: 15vh;
   padding: 32px;
-	justify-content: center;
+  justify-content: center;
   animation: expand 700ms ease-in-out forwards;
-	width: 900px;
-	height: 500px;
+  width: 900px;
+  height: 500px;
 }
 
 .greeting-text-wrapper {
   margin-top: 14px;
   margin-bottom: 8px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .greeting-header {
   font-size: 26px;
   color: hsla(0, 0%, 100%, 0.8);
   margin-bottom: inherit;
-	text-align: center;
+  text-align: center;
 }
 
 .greeting-text {
   font-size: 20px;
   color: hsla(0, 0%, 100%, 0.6);
-	display:flex;
-	flex-direction: column;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .greeting-text > a {
   text-decoration: none;
   color: #bb86fc;
-	align-self: center;
+  align-self: center;
 }
 
 .instruction-header {
@@ -189,16 +191,16 @@ body {
   color: hsla(0, 0%, 100%, 0.8);
 }
 .greeting-instructions {
-  margin-top: 24px;;
-	display: flex;
-	justify-content: center;
-	align-items: center;;
-	flex-direction: column;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .greeting-instructions-text {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin-top: 8px;
 }
 .graph-wrapper {
@@ -214,8 +216,6 @@ body {
   align-self: center;
 }
 
-
-
 #text {
   font-size: 14px;
 }
@@ -223,7 +223,7 @@ body {
 li {
   font-size: 16px;
   color: hsla(0, 0%, 100%, 0.6);
-	margin-bottom: 2px;
+  margin-bottom: 2px;
 }
 
 .li-header {
@@ -231,7 +231,7 @@ li {
   margin-bottom: 8px;
   font-weight: 400;
   color: hsla(0, 0%, 100%, 0.8);
-	font-size: 18px;
+  font-size: 18px;
 }
 
 @keyframes expand {
@@ -252,9 +252,12 @@ li {
   }
 }
 
-
 footer {
-	font-size: 12px;
-	margin-top: 40px;
-	  color: hsla(0, 0%, 100%, 0.4);
+  font-size: 12px;
+  margin-top: 40px;
+  color: hsla(0, 0%, 100%, 0.4);
+}
+
+.fab {
+	color: white;
 }
