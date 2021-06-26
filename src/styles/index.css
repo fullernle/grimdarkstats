@@ -98,7 +98,12 @@ nav {
 
 .logo {
   font-size: 28px;
-  margin-left: 0;
+	display: flex;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  margin: 0 8px;
   cursor: pointer;
 }
 
@@ -132,8 +137,8 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 120px;
-	display: flex;
-	margin-right: 24px;
+  display: flex;
+  margin-right: 24px;
 }
 
 .parent:hover {
@@ -259,5 +264,5 @@ footer {
 }
 
 .fab {
-	color: white;
+  color: white;
 }
