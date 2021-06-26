@@ -53,6 +53,7 @@ export const drawHome = () => {
 	const li3 = document.createElement("li");
 	li3.classList.add("li-header");
 	const li4 = document.createElement("li");
+	const li4pt2 = document.createElement("li");
 	const li5 = document.createElement("li");
 	li5.classList.add("li-header");
 	const li6 = document.createElement("li");
@@ -62,7 +63,8 @@ export const drawHome = () => {
   const instText2 =
     "Hover over visualizations to gain more detailed information";
   const instText3 = "Most Commonly Played Factions:";
-  const instText4 = "Click on center slices to expand breakdown of subfactions";
+  const instText4 = "Click on center slices to expand breakdown of subfactions.";
+	const instText4pt2 = "Click on center circle to return to all factions";
   const instText5 = "Faction Win Rates:";
   const instText6 =
     "Click on percentages to be taken to a breakdown of each Faction's wins";
@@ -70,6 +72,7 @@ export const drawHome = () => {
 	li2.append(instText2);
 	li3.append(instText3);
 	li4.append(instText4);
+	li4pt2.append(instText4pt2);
 	li5.append(instText5);
 	li6.append(instText6);
 
@@ -77,6 +80,7 @@ export const drawHome = () => {
   sectionText.append(li2);
   sectionText.append(li3);
   sectionText.append(li4);
+	sectionText.append(li4pt2);
   sectionText.append(li5);
   sectionText.append(li6);
 
