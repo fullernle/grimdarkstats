@@ -22,6 +22,7 @@ p {
 }
 .graph-wrapper {
   margin: 0 auto;
+	margin-top: 36px;
 }
 
 .graph {
