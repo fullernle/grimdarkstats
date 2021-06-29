@@ -111,7 +111,6 @@ export const clearGraphHeader = () => {
 
 export const clearHome = () => {
   let child = document.querySelector(".content").childNodes[0];
-	console.log(child);
   if (child) {
     child.remove();
   }
