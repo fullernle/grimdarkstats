@@ -49,6 +49,7 @@ export const drawHome = () => {
   sectionText.classList.add("greeting-instructions-text");
 
 	const li1 = document.createElement("li");
+	li1.classList.add("main-instruction");
 	const li2 = document.createElement("li");
 	const li3 = document.createElement("li");
 	li3.classList.add("li-header");
@@ -59,7 +60,7 @@ export const drawHome = () => {
 	const li6 = document.createElement("li");
 
   const instText1 =
-    "Please use the navigation bar to peruse the visualizations";
+    "Please use the top navigation bar to be taken to each visualization";
   const instText2 =
     "Hover over visualizations to gain more detailed information";
   const instText3 = "Most Commonly Played Factions:";

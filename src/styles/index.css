@@ -22,7 +22,7 @@ p {
 }
 .graph-wrapper {
   margin: 0 auto;
-	margin-top: 36px;
+  margin-top: 36px;
 }
 
 .graph {
@@ -61,6 +61,11 @@ svg {
   font-size: 16px;
   fill: #bb86fc;
 }
+
+.main-instruction {
+  color: #03dac6;
+}
+
 .mc-faction:hover {
   cursor: pointer;
 }
@@ -82,12 +87,25 @@ nav {
 .nav-bttn {
   display: flex;
   height: inherit;
+	width: 150px;
   align-items: center;
   justify-content: center;
   padding: 0 12px;
-  margin: 0 8px;
   transition: all 200ms ease-in-out;
   cursor: pointer;
+	text-align: center;
+}
+
+.nav-bttn-border {
+	position: absolute;
+	top: 0;
+	height: 57px;
+	width: inherit;
+	border-bottom: 2px solid rgb(208, 208, 208);
+}
+
+.nav-bttn-border:hover {
+	border-bottom: 2px solid black;
 }
 
 .nav-bttn:hover {
@@ -99,7 +117,7 @@ nav {
 
 .logo {
   font-size: 28px;
-	display: flex;
+  display: flex;
   height: inherit;
   align-items: center;
   justify-content: center;
