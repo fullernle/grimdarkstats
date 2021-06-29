@@ -27,7 +27,6 @@ p {
 
 .graph {
   flex-wrap: wrap;
-  max-width: 80vw;
   overflow-y: auto;
 }
 
