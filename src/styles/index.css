@@ -93,6 +93,7 @@ nav {
   transition: all 200ms ease-in-out;
   cursor: pointer;
 	text-align: center;
+	font-size: 16px;
 }
 
 .nav-bttn-border {
