@@ -1,6 +1,6 @@
 # Grimdark Stats
 
-[Live](fullernle.com/grimdarkstats)
+[Live](http://www.fullernle.com/grimdarkstats)
 
 ![Screenshot from 2021-07-08 14-28-13](https://user-images.githubusercontent.com/63718493/124993159-d4341a80-dff8-11eb-8ee0-3a6fb71fb30d.png)
 
