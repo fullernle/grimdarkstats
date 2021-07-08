@@ -1,10 +1,8 @@
 # Grimdark Stats
 
-### Table of Contents: 
-* [Background and Overview](#background-and-overview)
-* [Functionality and MVP ](#functionality-and-mvp)
-* [Architecture and Technologies](#architecture-and-technologies)
-* [Implementation Timeline](#implmentation-timeline)
+[Live](fullernle.com/grimdarkstats)
+
+![Screenshot from 2021-07-08 14-28-13](https://user-images.githubusercontent.com/63718493/124993159-d4341a80-dff8-11eb-8ee0-3a6fb71fb30d.png)
 
 
 ## Background and Overview 
@@ -13,10 +11,10 @@ Grimdark stats's goal is to utilize the fantastic data collected over at 40kstat
 
 ## Functionality and MVP
 
-- [ ] Instructions for Users
-- [ ] Have main visualization breaking down faction spread
-- [ ] Select visualization for each faction
-- [ ] Hover over charts to see more information.
+- [x] Instructions for Users
+- [x] Have main visualization breaking down faction spread
+- [x] Select visualization for each faction
+- [x] Hover over charts to see more information.
 
 ## Architecture and Technologies 
 
