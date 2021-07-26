@@ -37,38 +37,50 @@ Day 3: Finish any learning necessary and start implementing data visualization f
 Day 4: Create each faction breakdown table, and add interactivity.
 
 ## Code Snippet
-Event Listeners to redraw page
+Filter and configure data for D3 usage
 ```javascript
-const mcFaction = document.querySelector(".mc-faction");
-const wrFaction = document.querySelector(".wr-faction");
-const logo = document.querySelector(".logo");
+export const filterFactions = async (data) => {
+  let filter = {
+    name: "Factions Breakdown",
+    children: [],
+  };
 
-mcFaction.addEventListener("click", () => {
-  const exists = document.querySelector(".sunburst");
-  if (!exists) {
-    clearHome();
-    clearGraph();
-    clearGraphHeader();
-    setTimeout(1000, drawSunburst(subFactionData));
-  }
-});
-wrFaction.addEventListener("click", () => {
-  const exists = document.querySelector(".circle");
-  if (!exists) {
-    clearHome();
-    clearGraph();
-    clearGraphHeader();
-    setTimeout(1000, drawPercentages(factionData));
-  }
-});
+  let filtered = await data.then((d) => {
+    let currFaction = d[0].Faction;
+    let factionInfo = {
+      name: currFaction,
+      children: [],
+      total: 0,
+      colorValue: factionColors[currFaction],
+      factionWin: d[0]["Faction Win %"],
+    };
 
-logo.addEventListener("click", () => {
-  const exists = document.querySelector(".greeting");
-  if (!exists) {
-    clearHome();
-    clearGraph();
-    clearGraphHeader();
-    drawHome();
-  }
-});
+    d.forEach((row, i) => {
+      if (row.Faction !== currFaction) {
+        currFaction = row.Faction;
+        factionInfo.total = sumValues(factionInfo.children);
+        filter.children.push(factionInfo);
+
+        factionInfo = {
+          name: currFaction,
+          children: [],
+          total: 0,
+          colorValue: factionColors[currFaction],
+        };
+      }
+
+      let chapterInfo = {
+        name: row.Chapter,
+        value: row["# Lists"],
+        colorValue: factionColors[currFaction],
+        win: row["Win %"],
+      };
+      factionInfo.factionWin = row["Faction Win %"];
+      factionInfo.children.push(chapterInfo);
+
+      if (!d[i + 1]) filter.children.push(factionInfo);
+    });
+  });
+  return filter;
+};
 ```
