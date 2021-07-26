@@ -35,3 +35,40 @@ Day 2: Dedicate day to learning D3.js and how to incorporate data provided form 
 Day 3: Finish any learning necessary and start implementing data visualization for main overall faction breakdown.
 
 Day 4: Create each faction breakdown table, and add interactivity.
+
+## Code Snippet
+Event Listeners to redraw page
+```javascript
+const mcFaction = document.querySelector(".mc-faction");
+const wrFaction = document.querySelector(".wr-faction");
+const logo = document.querySelector(".logo");
+
+mcFaction.addEventListener("click", () => {
+  const exists = document.querySelector(".sunburst");
+  if (!exists) {
+    clearHome();
+    clearGraph();
+    clearGraphHeader();
+    setTimeout(1000, drawSunburst(subFactionData));
+  }
+});
+wrFaction.addEventListener("click", () => {
+  const exists = document.querySelector(".circle");
+  if (!exists) {
+    clearHome();
+    clearGraph();
+    clearGraphHeader();
+    setTimeout(1000, drawPercentages(factionData));
+  }
+});
+
+logo.addEventListener("click", () => {
+  const exists = document.querySelector(".greeting");
+  if (!exists) {
+    clearHome();
+    clearGraph();
+    clearGraphHeader();
+    drawHome();
+  }
+});
+```
